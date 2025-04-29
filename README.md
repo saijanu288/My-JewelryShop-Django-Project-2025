@@ -1,0 +1,1 @@
+# My-Django-Jewelry-Shop-project
