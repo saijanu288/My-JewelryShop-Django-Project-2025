@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center text-warning mb-4">Welcome to Jewelry Shop!</h1>
+
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                {% if product.product_image %}
+                    <img src="{{ product.product_image.url }}" class="card-img-top" alt="{{ product.title }}">
+                {% else %}
+                    <img src="/static/images/no-image.png" class="card-img-top" alt="No Image Available">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.title }}</h5>
+                    <p class="card-text">₹ {{ product.price }}</p>
+                    <a href="{% url 'store:product-detail' product.slug %}" class="btn btn-warning">View</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

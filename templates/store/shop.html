@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <!-- Breadcrumb and Heading -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row px-4 px-lg-5 py-lg-4 align-items-center">
+        <div class="col-lg-6">
+          <h1 class="h2 text-uppercase mb-0">Shop</h1>
+        </div>
+        <div class="col-lg-6 text-lg-right">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-lg-end mb-0 px-0">
+              <li class="breadcrumb-item"><a href="{% url 'store:home' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Shop</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Listing -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        {% for product in products %}
+        <div class="col-lg-4 col-sm-6 mb-4">
+          <div class="product text-center border p-3 rounded">
+            <div class="mb-3 position-relative">
+              <a class="d-block mb-2" href="{% url 'store:product-detail' product.slug %}">
+                <img class="img-fluid w-100" src="{{ product.product_image.url }}" alt="{{ product.title }}">
+              </a>
+              <h6 class="mb-1">{{ product.title }}</h6>
+              <p class="small text-muted">₹{{ product.price }}</p>
+            </div>
+            <form action="{% url 'store:shop_checkout' product.id %}" method="post">
+              {% csrf_token %}
+              <input type="hidden" name="product_id" value="{{ product.id }}">
+              <div class="form-check text-left">
+                <input class="form-check-input" type="radio" name="payment_method" value="COD" required>
+                <label class="form-check-label">Cash on Delivery</label>
+              </div>
+              <div class="form-check text-left">
+                <input class="form-check-input" type="radio" name="payment_method" value="Razorpay" required>
+                <label class="form-check-label">Razorpay</label>
+              </div>
+              <button type="submit" class="btn btn-sm btn-primary mt-2">Buy Now</button>
+            </form>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock content %}

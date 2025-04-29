@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="mb-4">🛍️ Your Orders</h2>
+
+    {% if orders %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Item</th>
+                    <th>Image</th>
+                    <th>Qty.</th>
+                    <th>Ordered Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                    {% for item in order.items.all %}
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ item.product.title }}</td>
+                        <td>
+                            <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}" width="60" height="60" style="object-fit: cover; border-radius: 8px;">
+                        </td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ order.created_at|date:"d M Y" }}</td>
+                        <td>
+                            {% if order.status == "Pending" %}
+                                <span class="badge bg-warning text-dark">{{ order.status }}</span>
+                            {% elif order.status == "Completed" %}
+                                <span class="badge bg-success">{{ order.status }}</span>
+                            {% elif order.status == "Cancelled" %}
+                                <span class="badge bg-danger">{{ order.status }}</span>
+                            {% else %}
+                                <span class="badge bg-secondary">{{ order.status }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+        <div class="alert alert-info text-center" role="alert">
+            🛒 No orders found.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

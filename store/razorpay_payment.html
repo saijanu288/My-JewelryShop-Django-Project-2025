@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <h2>Proceed to Pay</h2>
+    <hr>
+
+    <p><strong>Order ID:</strong> {{ order.id }}</p>
+    <p><strong>Total Amount:</strong> ₹{{ order.total_price }}</p>
+
+    <form id="payment-form">
+        <script 
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="{{ razorpay_key }}"
+            data-amount="{{ amount }}"
+            data-currency="{{ currency }}"
+            data-order_id="{{ order_id }}"
+            data-buttontext="Pay with Razorpay"
+            data-name="Jewelry Shop"
+            data-description="Test Transaction"
+            data-image="{% static 'images/logo.png' %}"
+            data-prefill.name="{{ request.user.get_full_name }}"
+            data-prefill.email="{{ request.user.email }}"
+            data-theme.color="#F37254"
+            data-callback_url="{% url 'payment_success' %}">
+        </script>
+        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+    </form>
+</div>
+{% endblock %}

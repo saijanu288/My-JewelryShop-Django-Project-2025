@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <!-- Typing Animation Heading -->
+    <h1 class="text-center" style="color: #FFD700;">
+        <span id="typed-text"></span>
+    </h1>
+
+    <div class="row mt-4">
+        <!-- Profile Image -->
+        <div class="col-md-4 text-center">
+            <img src="{% static 'images/myimage.jpeg' %}" alt="About Me" class="about-image">
+            <div class="mt-3">
+                <p><strong>📍 Address:</strong><br> #2, Gogul Nagar, CTO Colony, Lakshmipuram, West Tambaram, Chennai-600045</p>
+                <p><strong>📞 Mobile:</strong> +91 99401 95828</p>
+                <p><strong>📧 Email:</strong> <a href="mailto:njanani.85@gmail.com">njanani.85@gmail.com</a></p>
+                <p><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/janu-sudhagar-3a074875" target="_blank">View Profile</a></p>
+            </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="col-md-8">
+
+            <!-- Objective -->
+            <div class="section">
+                <h2 style="color: #0d6efd;">Objective</h2>
+                <p style="color: #6c757d;">
+                    Highly skilled Administrative Support Executive with extensive experience managing office operations, scheduling, and providing executive-level administrative support. 
+                    Proven track record of streamlining processes, increasing efficiency, and ensuring effective communication. 
+                    To work in an innovative environment and to prove my skills and abilities as an individual and team player.
+                </p>
+            </div>
+
+            <!-- Work Experience -->
+            <div class="section">
+                <h2 style="color: #0d6efd;">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5>Software Technology Parks of India (STPI), Bangalore</h5>
+                        <p>Administrative Support Executive (April 2010 – January 2011)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Silicon Tech One Pvt Ltd, Bangalore</h5>
+                        <p>Account Executive (June 2009 – February 2010)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Design Desk India Pvt Ltd, Chennai</h5>
+                        <p>Project Management Trainee (March 2008 – May 2009)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2 style="color: #0d6efd;">Skills</h2>
+                <div class="mb-2">Python, C Programming</div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" style="width: 90%">90%</div>
+                </div>
+                <div class="mb-2">Web Technologies (HTML)</div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-info" style="width: 85%">85%</div>
+                </div>
+                <div class="mb-2">Database (MS Office, MS Access)</div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" style="width: 80%">80%</div>
+                </div>
+                <div class="mb-2">Tools (Tally, Photoshop)</div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" style="width: 75%">75%</div>
+                </div>
+            </div>
+
+            <!-- Project -->
+            <div class="section">
+                <h2 style="color: #0d6efd;">Project</h2>
+                <p style="color: #6c757d;">
+                    <strong>Computer Accounting System</strong>  
+                    <br>Platform: Windows XP  
+                    <br>Organization: State Bank of India, Nagapattinam
+                </p>
+            </div>
+
+            <!-- Education -->
+            <div class="section">
+                <h2 style="color: #0d6efd;">Education</h2>
+                <ul style="color: #495057;">
+                    <li><strong>MBA (Master of Business Administration):</strong> Alagappa University, Karaikudi (2005–2007) — 58.58%</li>
+                    <li><strong>B.Sc:</strong> A.D.M. College for Women, Nagapattinam (2002–2005) — 68.68%</li>
+                    <li><strong>SSLC:</strong> Govt Hr Sec School, Sikkal (2000) — First Class</li>
+                    <li><strong>HSC:</strong> N.D. Hr Sec School, Nagapattinam (2002) — Second Class</li>
+                </ul>
+            </div>
+
+            <!-- Personal Strengths -->
+            <div class="section">
+                <h2 style="color: #0d6efd;">Personal Strengths</h2>
+                <ul style="color: #495057;">
+                    <li>Good communication, analytical and problem solving skills</li>
+                    <li>Leadership and team player abilities</li>
+                    <li>Quick adaptability to new technologies</li>
+                    <li>Office files and documents management</li>
+                </ul>
+            </div>
+
+            <!-- Resume Download and Back Home -->
+            <div class="text-center mt-5">
+                <a href="{% static 'docs/janani_resume.pdf' %}" class="btn btn-warning" download>📄 Download My Resume</a>
+                <a href="{% url 'store:home' %}" class="btn btn-primary ms-3">🏡 Back to Home</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    h2 {
+        margin-top: 30px;
+        font-weight: bold;
+    }
+    p, ul {
+        line-height: 1.8;
+    }
+    .section {
+        margin-top: 30px;
+    }
+    .timeline {
+        margin-left: 20px;
+    }
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+    .about-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        border: 4px solid #FFD700;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+        color: #d63384;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+        h1 {
+            font-size: 2rem;
+        }
+        .container {
+            padding: 20px;
+        }
+        .about-image {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<!-- Typed.js Typing Effect -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    new Typed("#typed-text", {
+        strings: ["Hello, I'm Janani!", "Administrative Support Executive", "Web Developer", "Python Enthusiast"],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true
+    });
+});
+</script>
+{% endblock %}

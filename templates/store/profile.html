@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+
+    {% include 'partials/_messages.html' %}
+
+    <div class="row mb-4">
+        <!-- Profile Photo and Upload Form -->
+        <div class="col-md-3 text-center">
+            {% if profile.profile_picture %}
+                <img src="{{ profile.profile_picture.url }}" class="rounded-circle img-thumbnail" width="150" height="150" alt="Profile Picture">
+            {% else %}
+                <img src="{% static 'images/default-profile.png' %}" class="rounded-circle img-thumbnail" width="150" height="150" alt="Default Profile">
+            {% endif %}
+
+            <!-- Upload form -->
+            <form method="POST" enctype="multipart/form-data" action="{% url 'store:update_profile_picture' %}">
+                {% csrf_token %}
+                <div class="mt-3">
+                    <input type="file" name="profile_picture" class="form-control mb-2" required>
+                    <button type="submit" class="btn btn-sm btn-success">Upload</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- User Info -->
+        <div class="col-md-9">
+            <div class="bg-light p-4 rounded">
+                <h2>{{ request.user.first_name }} {{ request.user.last_name }}</h2>
+                <p><strong>Email:</strong> {{ request.user.email }}</p>
+                <p><strong>Username:</strong> {{ request.user.username }}</p>
+                <p class="mt-3">
+                    <a class="btn btn-primary" href="{% url 'store:add-address' %}">➕ Add Address</a>
+                    <a class="btn btn-outline-primary" href="{% url 'store:order_history' %}">🧾 My Orders</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Addresses -->
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    📍 Addresses 
+                    <span class="float-end">
+                        <a href="{% url 'store:add-address' %}">Add New</a>
+                    </span>
+                </div>
+                <div class="card-body">
+                    {% if addresses %}
+                        {% for address in addresses %}
+                            <div class="mb-3">
+                                <strong>Address {{ forloop.counter }}:</strong><br>
+                                {{ address.locality }}, {{ address.city }}, {{ address.state }}
+                                <br>
+                                <a href="{% url 'store:remove-address' address.id %}" class="text-danger small">🗑️ Remove</a>
+                            </div>
+                            <hr>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-danger">No addresses added yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">🛒 Recent Orders</div>
+                <div class="card-body">
+                    {% if orders %}
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Order ID</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{ order.id }}</td>
+                                    <td>₹{{ order.total_price }}</td>
+                                    <td>
+                                        {% if order.is_paid %}
+                                            <span class="badge bg-success">Paid</span>
+                                        {% else %}
+                                            <span class="badge bg-warning">Pending</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p class="text-danger">You've not placed any orders yet.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock content %}

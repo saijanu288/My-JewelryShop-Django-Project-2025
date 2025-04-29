@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+<div class="text-center mt-5">
+    <h1 class="text-success">🎉 Payment Successful!</h1>
+    <p>Your order has been placed successfully.</p>
+    <p><strong>Order ID:</strong> {{ order.id }}</p>
+    <p><strong>Order Date:</strong> {{ order.created_at|date:"F d, Y" }}</p>
+    <p><strong>Total Paid:</strong> ₹{{ order.total_amount|intcomma }}</p>
+
+    <a href="{% url 'store:orders' %}" class="btn btn-primary mt-4">View My Orders</a>
+</div>
+
+{% endblock %}
