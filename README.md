@@ -39,49 +39,23 @@ Check out the live demo of the Jewelry Shop platform:
   - Content Management
 
 ## 📸 Screenshots
-
 <details>
-<summary>Click to view screenshots</summary>
-
-### Main Page
-[![Main Page](https://github.com/user-attachments/assets/451707d5-cad9-4db9-b8ed-7982b282f044)](https://github.com/user-attachments/assets/451707d5-cad9-4db9-b8ed-7982b282f044)
-
-### Footer 
-[![User Registration](https://github.com/user-attachments/assets/bd8441f4-598f-4af2-9435-96cb8741121b)](https://github.com/user-attachments/assets/bd8441f4-598f-4af2-9435-96cb8741121b)
-
-### Product
-[![User Login](https://github.com/user-attachments/assets/22c32f75-ae0e-4b2a-b4df-2dc73178ff6f)](https://github.com/user-attachments/assets/22c32f75-ae0e-4b2a-b4df-2dc73178ff6f)
-
-### Catagories
-[![Password Reset](https://github.com/user-attachments/assets/b78b9e44-26c6-44ce-80a1-04e67dc36e49)](https://github.com/user-attachments/assets/b78b9e44-26c6-44ce-80a1-04e67dc36e49)
-
-### Cart
-[![Admin Dashboard](https://github.com/user-attachments/assets/32237254-f341-4a34-a3b2-3b6a1f49a96f)](https://github.com/user-attachments/assets/32237254-f341-4a34-a3b2-3b6a1f49a96f)
-
-### User Cart
-[![Product Management](https://github.com/user-attachments/assets/fca0ea73-736f-407e-ba72-e676b962deca)](https://github.com/user-attachments/assets/fca0ea73-736f-407e-ba72-e676b962deca)
-
-### Shopping Cart
-[![Shopping Cart](https://github.com/user-attachments/assets/ce02f129-388b-467f-bf7f-4aab8e16b19f)](https://github.com/user-attachments/assets/ce02f129-388b-467f-bf7f-4aab8e16b19f)
-
-### Checkout Page
-[![Checkout Page](https://github.com/user-attachments/assets/ae6b5272-cc4d-4086-98c7-fbbb96d87c09)](https://github.com/user-attachments/assets/ae6b5272-cc4d-4086-98c7-fbbb96d87c09)
-
-### Order Confirmation
-[![Order Confirmation](https://github.com/user-attachments/assets/c7433100-ecac-4b4d-895d-e9dfb9a358ba)](https://github.com/user-attachments/assets/c7433100-ecac-4b4d-895d-e9dfb9a358ba)
-
-### Payment Screen
-[![Payment Screen](https://github.com/user-attachments/assets/d883eeeb-2365-437e-8b1d-19808e47d0b5)](https://github.com/user-attachments/assets/d883eeeb-2365-437e-8b1d-19808e47d0b5)
-
-### Order History
-[![Order History](https://github.com/user-attachments/assets/8aee81fa-fb7c-4c88-b0bd-e5c2c62cca63)](https://github.com/user-attachments/assets/8aee81fa-fb7c-4c88-b0bd-e5c2c62cca63)
-
-### Admin Orders Management
-[![Admin Orders Management](https://github.com/user-attachments/assets/5e061a35-c603-4067-8668-85c0d327db65)](https://github.com/user-attachments/assets/5e061a35-c603-4067-8668-85c0d327db65)
-
-### Admin Product Management
-[![Admin Product Management](https://github.com/user-attachments/assets/289ff619-5ea0-40cd-b115-39b1174e3100)](https://github.com/user-attachments/assets/289ff619-5ea0-40cd-b115-39b1174e3100)
-
+![Image](https://github.com/user-attachments/assets/79a486cc-3d81-4347-a929-04d566c069a0)
+![Image](https://github.com/user-attachments/assets/74e59924-f153-4955-9abb-d597b7e6244e)
+![Image](https://github.com/user-attachments/assets/e0387bc7-0e11-4f87-8859-f12516f57278)
+![Image](https://github.com/user-attachments/assets/87598ac4-2e74-406d-9049-51baf91f9d27)
+![Image](https://github.com/user-attachments/assets/4b633a5e-d68d-4cb0-bfa3-0672c239c6ca)
+![Image](https://github.com/user-attachments/assets/3fc7f8e4-0f1c-4b22-8225-d502be831388)
+![Image](https://github.com/user-attachments/assets/44ba45a2-1962-424b-8f27-ff075f83d727)
+![Image](https://github.com/user-attachments/assets/607d78a8-086d-4648-91c9-ee9c572b0c3e)
+![Image](https://github.com/user-attachments/assets/966286d7-418e-4e4f-9143-c3a84b861172)
+![Image](https://github.com/user-attachments/assets/5889393f-960d-47dd-8da6-3adb4b9ee327)
+![Image](https://github.com/user-attachments/assets/54665097-99dd-4e85-98c4-6b950bf2e8ca)
+![Image](https://github.com/user-attachments/assets/9d225030-cbb4-4f01-9a08-ac7423960b4b)
+![Image](https://github.com/user-attachments/assets/922c2157-f14c-48bc-835d-e883d857d699)
+![Image](https://github.com/user-attachments/assets/ec9e531d-355a-4b0e-8f1a-9e0aff340660)
+![Image](https://github.com/user-attachments/assets/c3b0ddad-938e-4f64-8a5b-905534286f31)
+![Image](https://github.com/user-attachments/assets/d8ced9a2-92ac-4952-b032-1a5ef07dcca7)
 </details>
 
 ### Prerequisites
@@ -292,18 +266,9 @@ Project is: _in progress_
 
 📜 License
 This repository is licensed under the MIT License.
-<p align="center">
-  <a href="mailto:engrmumtazali01@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://www.linkedin.com/in/mumtaz-ali"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://www.instagram.com/its_maliyzi"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
-  <a href="https://x.com/mumtazali1223/status/1846913595021328672?s=51"><img src="https://img.shields.io/badge/X-1DA1F2?style=for-the-badge&logo=x&logoColor=white"/></a>
-  <a href="https://discord.gg/DZgwHzEb"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"/></a>
-  <a href="https://wa.me/923476338292" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
-   <a href="https://www.hackerrank.com/profile/engrmumtazali01" target="_blank">
-  <img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white"/>
-</a>
 </p>
 
-<p align="center">Made with ❤️ by Mumtaz Ali</p>
+<p align="center">Made with ❤️ by N.Janani</p>
 
 **Happy coding!** ✨
+# My-Django-Jewelry-Shop-project
